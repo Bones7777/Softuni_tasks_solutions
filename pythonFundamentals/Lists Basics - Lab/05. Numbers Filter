@@ -1,0 +1,18 @@
+n = int(input())
+numbers = []
+for i in range(n):
+    num = int(input())
+    numbers.append(num)
+
+command = input()
+result = []
+if command == "even":
+    result = list(filter(lambda x: x % 2 == 0, numbers))
+elif command == "odd":
+    result = list(filter(lambda x: x % 2 == 1, numbers))
+elif command == "negative":
+    result = list(filter(lambda x: x < 0, numbers))
+elif command == "positive":
+    result = list(filter(lambda x: x >= 0, numbers))
+
+print(result)
