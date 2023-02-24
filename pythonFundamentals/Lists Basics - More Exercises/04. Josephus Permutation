@@ -1,0 +1,12 @@
+from collections import deque
+
+people = deque(input().split())
+k = int(input())
+
+result = []
+
+while people:
+    people.rotate(-(k - 1))
+    result.append(people.popleft())
+
+print("[" + ",".join(result) + "]")
